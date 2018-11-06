@@ -1,3 +1,5 @@
+//#define INET_PTON_LOOSE_MAIN
+
 #ifndef INET_PTON_LOOSE
 #define INET_PTON_LOOSE
 /*

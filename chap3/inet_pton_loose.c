@@ -33,6 +33,8 @@ int inet_pton_loose(int famliy, const char* strptr, void* addrptr)
     return inet_pton(famliy,strptr,addrptr);
 }
 
+
+#ifdef INET_PTON_LOOSE_MAIN
 int main()
 {
     struct in6_addr addr6;
@@ -45,3 +47,4 @@ int main()
     ret = inet_pton_loose(AF_INET6,"10.214.148.125",&addr6);
     printf("%d %s\n", ret, inet_ntop(AF_INET6,(const void*)&addr6,buff,INET6_ADDRSTRLEN));
 }
+#endif
