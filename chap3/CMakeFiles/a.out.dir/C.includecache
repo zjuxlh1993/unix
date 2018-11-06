@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/juliusxlh/git/unix/chap3/inet_pton_loose.c
+arpa/inet.h
+-
+stdio.h
+-
+memory.h
+-
+inet_pton_loose.h
+/home/juliusxlh/git/unix/chap3/inet_pton_loose.h
+
+/home/juliusxlh/git/unix/chap3/inet_pton_loose.h
+

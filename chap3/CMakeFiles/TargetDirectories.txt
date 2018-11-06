@@ -1,0 +1,3 @@
+/home/juliusxlh/git/unix/chap3/CMakeFiles/rebuild_cache.dir
+/home/juliusxlh/git/unix/chap3/CMakeFiles/a.out.dir
+/home/juliusxlh/git/unix/chap3/CMakeFiles/edit_cache.dir
