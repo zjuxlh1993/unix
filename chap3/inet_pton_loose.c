@@ -15,7 +15,8 @@ int inet_pton_loose(int famliy, const char* strptr, void* addrptr)
         int ret = inet_pton(famliy,strptr,addrptr);
         if (ret==0){
             int ipv4v[4];
-            if (sscanf(strptr,"%d.%d.%d.%d",&ipv4v[0],&ipv4v[1],&ipv4v[2],&ipv4v[3])<0){
+            int tmp;
+            if ((tmp = sscanf(strptr,"%d.%d.%d.%d",&ipv4v[0],&ipv4v[1],&ipv4v[2],&ipv4v[3]))!=4){
                 return -1;
             } else {
                 struct in6_addr* ptr = addrptr;
@@ -45,6 +46,8 @@ int main()
     ret = inet_pton_loose(AF_INET,"007",&addr4);
     printf("%d %d %s\n",(int)addr4.s_addr, ret, inet_ntop(AF_INET,(const void*)&addr4,buff,INET_ADDRSTRLEN));
     ret = inet_pton_loose(AF_INET6,"10.214.148.125",&addr6);
+    printf("%d %s\n", ret, inet_ntop(AF_INET6,(const void*)&addr6,buff,INET6_ADDRSTRLEN));
+    ret = inet_pton_loose(AF_INET6,"10.214.148.",&addr6);
     printf("%d %s\n", ret, inet_ntop(AF_INET6,(const void*)&addr6,buff,INET6_ADDRSTRLEN));
 }
 #endif

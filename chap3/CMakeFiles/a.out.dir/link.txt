@@ -1,1 +1,1 @@
-/usr/bin/cc -g  -rdynamic CMakeFiles/a.out.dir/inet_pton_loose.c.o  -o a.out 
+/usr/bin/cc   -rdynamic CMakeFiles/a.out.dir/inet_pton_loose.c.o  -o a.out 
